@@ -46,7 +46,7 @@ function breakfast()
             lunch $target
         else
             # This is probably just the DU model name
-            lunch du_$target-userdebug
+            lunch du_$target-user
         fi
     fi
     return $?
