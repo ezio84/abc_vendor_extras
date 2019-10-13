@@ -25,7 +25,7 @@ function mka() {
 function breakfast()
 {
     target=$1
-    DU_DEVICES_ONLY="true"
+    ABC_DEVICES_ONLY="true"
     unset LUNCH_MENU_CHOICES
     add_lunch_combo full-eng
     for f in `/bin/ls vendor/nexus/vendorsetup.sh 2> /dev/null`
@@ -45,8 +45,8 @@ function breakfast()
             # A buildtype was specified, assume a full device name
             lunch $target
         else
-            # This is probably just the DU model name
-            lunch du_$target-user
+            # This is probably just the ABC model name
+            lunch abc_$target-user
         fi
     fi
     return $?
