@@ -58,6 +58,7 @@ function brunch()
 {
     breakfast $*
     if [ $? -eq 0 ]; then
+        make installclean
         time mka bacon
     else
         echo "No such item in brunch menu. Try 'breakfast'"
