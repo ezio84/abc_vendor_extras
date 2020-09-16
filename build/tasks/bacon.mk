@@ -35,7 +35,6 @@ INTERNAL_BACON_TARGET := $(PRODUCT_OUT)/$(INTERNAL_BACON_NAME).zip
 .PHONY: bacon
 bacon: $(INTERNAL_OTA_PACKAGE_TARGET)
 	$(hide) ln -f $(INTERNAL_OTA_PACKAGE_TARGET) $(INTERNAL_BACON_TARGET)
-	$(hide) $(MD5SUM) $(INTERNAL_BACON_TARGET) | sed "s|$(PRODUCT_OUT)/||" > $(INTERNAL_BACON_TARGET).md5sum
 	#@echo "Package Complete: $(INTERNAL_BACON_TARGET)" >&2
 
 	@echo  ${CL_RED}""${CL_RED}
@@ -63,4 +62,3 @@ bacon: $(INTERNAL_OTA_PACKAGE_TARGET)
 	@echo -e ${CL_RST}""Package Complete: "$(INTERNAL_BACON_TARGET)"${CL_RST}
 	@echo -e ${CL_RED}"======================================================================================="${CL_RED}
 	@echo -e ${CL_RST}"Be yourself. Unless you can be a unicorn, in that case, you should always be a unicorn."${CL_RST}
-
