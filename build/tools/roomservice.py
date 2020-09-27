@@ -2,7 +2,7 @@
 
 # Copyright (C) 2013 Cybojenix <anthonydking@gmail.com>
 # Copyright (C) 2013 The OmniROM Project
-# Copyright (C) 2019 The Dirty Unicorns Project
+# Copyright (C) 2019-2020 The Dirty Unicorns Project
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -39,7 +39,7 @@ from xml.etree import ElementTree
 # Default properties
 DEFAULT_REMOTE = 'github'
 DEFAULT_ORG = 'DirtyUnicorns'
-DEFAULT_BRANCH = 'q10x'
+DEFAULT_BRANCH = 'r11x'
 ALTERNATE_REMOTE = 'alternate'
 # Dependency file name
 DEPENDENCY_FILE = 'du.dependencies'
