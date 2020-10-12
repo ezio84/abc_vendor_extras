@@ -45,7 +45,7 @@ ALTERNATE_REMOTE = 'alternate'
 DEPENDENCY_FILE = 'du.dependencies'
 # Where the local manifest path is located
 LOCAL_MANIFEST_PATH = '.repo/local_manifests'
-LOCAL_MANIFEST= LOCAL_MANIFEST_PATH + '/du_manifest.xml'
+LOCAL_MANIFEST= LOCAL_MANIFEST_PATH + '/abc_manifest.xml'
 # Github api
 GITHUB_API = 'https://api.github.com/users/%s/repos?page=%d&per_page=100'
 
@@ -313,11 +313,11 @@ if __name__ == "__main__":
     # Target to build
     product = sys.argv[1]
 
-    # If the target is i.e du_taimen, we just need to get taimen
+    # If the target is i.e abc_taimen, we just need to get taimen
     try:
         device = product[product.index("_") + 1:]
     except ValueError:
-        exit("The target you entered wouldn't work, use instead du_{0}\n".format(product))
+        exit("The target you entered wouldn't work, use instead abc_{0}\n".format(product))
 
     # Whether we need to just fetch dependencies or not
     if len(sys.argv) > 2:

@@ -25,11 +25,11 @@ function mka() {
 function breakfast()
 {
     target=$1
-    DU_DEVICES_ONLY="true"
+    ABC_DEVICES_ONLY="true"
     unset LUNCH_MENU_CHOICES
     add_lunch_combo full-eng
-       for f in $(test -d $ANDROID_BUILD_TOP/vendor/du && \
-            find -L $ANDROID_BUILD_TOP/vendor/du  -maxdepth 4 -name 'vendorsetup.sh' 2>/dev/null | sort); do
+       for f in $(test -d $ANDROID_BUILD_TOP/vendor/nexus && \
+            find -L $ANDROID_BUILD_TOP/vendor/nexus  -maxdepth 4 -name 'vendorsetup.sh' 2>/dev/null | sort); do
             echo "including $f"
             . $f
         done
@@ -45,8 +45,8 @@ function breakfast()
             # A buildtype was specified, assume a full device name
             lunch $target
         else
-            # This is probably just the DU model name
-            lunch du_$target-user
+            # This is probably just the ABC model name
+            lunch abc_$target-user
         fi
     fi
     return $?
