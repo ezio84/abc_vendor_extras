@@ -17,3 +17,11 @@ define addVar
 endef
 
 $(foreach v,$(EXPORT_TO_SOONG),$(eval $(call addVar,$(v))))
+
+SOONG_CONFIG_NAMESPACES += lineageGlobalVars
+SOONG_CONFIG_lineageGlobalVars += \
+    bootloader_message_offset \
+
+BOOTLOADER_MESSAGE_OFFSET ?= 0
+
+SOONG_CONFIG_lineageGlobalVars_bootloader_message_offset := $(BOOTLOADER_MESSAGE_OFFSET)
